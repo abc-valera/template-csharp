@@ -1,0 +1,21 @@
+{
+	"build": {
+		"dockerfile": "./Dockerfile",
+		"context": "."
+	},
+	// NOTE: remove this if undesired
+	"runArgs": ["--network=host"],
+	"postCreateCommand": ".devcontainer/postCreateCommand.sh",
+
+	// Mount dotnet cache (and other caches)
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-dotnettools.csdevkit",
+				"ms-dotnettools.csharp",
+				"ms-dotnettools.vscodeintellicode-csharp"
+			]
+		}
+	}
+}
